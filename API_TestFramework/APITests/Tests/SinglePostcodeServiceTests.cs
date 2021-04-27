@@ -2,6 +2,7 @@
 using Newtonsoft.Json.Linq;
 using NUnit.Framework;
 using API_App;
+using System.Threading.Tasks;
 
 namespace APITests.Tests
 {
@@ -10,10 +11,10 @@ namespace APITests.Tests
         SinglePostcodeService _singlePostcodeService;
 
         [OneTimeSetUp]
-        public void OneTimeSetUp()
+        public async Task OneTimeSetUp()
         {
             _singlePostcodeService = new SinglePostcodeService();
-            _singlePostcodeService.MakeRequest("EC2Y 5AS");
+            await _singlePostcodeService.MakeRequestAsync("EC2Y 5AS");
         }
 
         [Test]
@@ -27,6 +28,18 @@ namespace APITests.Tests
         {
             var result = _singlePostcodeService.ResponseContent["result"]["postcode"].ToString();
             Assert.That(result, Is.EqualTo("EC2Y 5AS"));
+        }
+
+        [Test]
+        public void ObjectStatusIs200()
+        {
+            Assert.That(_singlePostcodeService.ResponseObject.status, Is.EqualTo(200));
+        }
+
+        [Test]
+        public void AdminDistrict_IsCityOfLondon()
+        {
+            Assert.That(_singlePostcodeService.ResponseObject.result.admin_district, Is.EqualTo("City of London"));
         }
     }
 }

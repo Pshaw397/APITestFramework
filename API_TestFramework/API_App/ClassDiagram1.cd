@@ -4,27 +4,22 @@
     <Position X="0.75" Y="2.5" Width="1.5" />
     <TypeIdentifier>
       <HashCode>AAQAAAAAAAAAAAAABAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
-      <FileName>Model.cs</FileName>
+      <FileName>PostcodeModel.cs</FileName>
     </TypeIdentifier>
-    <ShowAsAssociation>
-      <Property Name="result" />
-    </ShowAsAssociation>
   </Class>
-  <Class Name="Result">
+  <Class Name="Outcode">
     <Position X="3" Y="2.5" Width="1.5" />
     <TypeIdentifier>
-      <HashCode>AAAAAAAAAAAAAAAABAAAAAAAAAAAAAAAAAAIAAAAAAA=</HashCode>
-      <FileName>Model.cs</FileName>
+      <HashCode>AAQAQBAAAhAAAAAAAAAAQAAACAAAAIACAAAAAAAAAAA=</HashCode>
+      <FileName>OutcodeModel.cs</FileName>
+      <NewMemberFileName>PostcodeModel.cs</NewMemberFileName>
     </TypeIdentifier>
-    <ShowAsAssociation>
-      <Property Name="result" />
-    </ShowAsAssociation>
   </Class>
   <Class Name="PostCode">
     <Position X="5.25" Y="2.5" Width="1.5" />
     <TypeIdentifier>
       <HashCode>AASAUBAAAlAACAAAAQEARAAACIEAAIQCAAAAAAACAAA=</HashCode>
-      <FileName>Model.cs</FileName>
+      <FileName>PostcodeModel.cs</FileName>
     </TypeIdentifier>
     <ShowAsAssociation>
       <Property Name="codes" />
@@ -34,18 +29,8 @@
     <Position X="7.5" Y="2.5" Width="1.5" />
     <TypeIdentifier>
       <HashCode>AAQAEBCAAhAACAAAAAAARAAAAAEAAAAAAAAAEAACAAA=</HashCode>
-      <FileName>Model.cs</FileName>
+      <FileName>PostcodeModel.cs</FileName>
     </TypeIdentifier>
-  </Class>
-  <Class Name="SinglePostcodeResponse">
-    <Position X="3" Y="4.25" Width="1.5" />
-    <TypeIdentifier>
-      <HashCode>AAQAAAAAAAAAAAAABAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
-      <FileName>Model.cs</FileName>
-    </TypeIdentifier>
-    <ShowAsAssociation>
-      <Property Name="result" />
-    </ShowAsAssociation>
   </Class>
   <Font Name="Segoe UI" Size="9" />
 </ClassDiagram>

@@ -73,7 +73,6 @@ namespace API_App
             Console.WriteLine($"\nAdmin District Bulk Deserialized: {adminDistrictFromBPR}");
             Console.WriteLine($"Postcode 1 Parish: {bulkPostcodeResponse.result[0].result.parish}");
             Console.WriteLine($"Postcode 2 Parish: {bulkPostcodeResponse.result[2].result.parish}");
-
         }
     }
 }

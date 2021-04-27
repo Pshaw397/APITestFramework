@@ -6,36 +6,29 @@ using Newtonsoft.Json;
 
 namespace API_App
 {
-    public class SinglePostcodeService
+    public class GetOutcodeService
     {
-        #region Properties
-        // Restsharp object which handles communicaiton with the API
+        // Properties
         public RestClient Client;
-        // Restsharp response object
         public IRestResponse RestResponse { get; set; }
-        // A Newtonsoft object representing the JSON response
         public JObject ResponseContent;
-        // An object model of the response
-        public SinglePostcodeResponse ResponseObject { get; set; }
-        // the postcode used in this API request
-        public string PostcodeSelected { get; set; }
-        #endregion
+        public OutcodeResponse ResponseObject { get; set; }
+        public string OutcodeSelected { get; set; }
 
-        // constructor - creates the RestClient object
-        public SinglePostcodeService()
+        public GetOutcodeService()
         {
             Client = new RestClient { BaseUrl = new Uri(AppConfigReader.BaseUrl) };
         }
 
-        public async Task MakeRequestAsync (string postcode)
+        public async Task MakeRequestAsync(string outcode)
         {
             // set up the request
             var request = new RestRequest();
             request.AddHeader("Content-Type", "application/json");
-            PostcodeSelected = postcode;
+            OutcodeSelected = outcode;
 
             // define request resource path, changing to lowercase and removing whitespace
-            request.Resource = $"postcodes/{postcode.ToLower().Replace(" ", "")}";
+            request.Resource = $"outcodes/{outcode.ToLower().Replace(" ", "")}";
 
             // make request
             RestResponse = await Client.ExecuteAsync(request);
@@ -44,7 +37,7 @@ namespace API_App
             ResponseContent = JObject.Parse(RestResponse.Content);
 
             // parse response body into an object tree
-            ResponseObject = JsonConvert.DeserializeObject<SinglePostcodeResponse>(RestResponse.Content);
+            ResponseObject = JsonConvert.DeserializeObject<OutcodeResponse>(RestResponse.Content);
         }
     }
 }
