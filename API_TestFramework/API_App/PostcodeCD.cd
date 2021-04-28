@@ -1,0 +1,59 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ClassDiagram MajorVersion="1" MinorVersion="1" MembersFormat="NameAndType">
+  <Class Name="API_App.PostcodesIOService.SinglePostcodeResponse">
+    <Position X="3.25" Y="4" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAQAAAAAAAAAAAAABAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>PostcodesIOService\DataHandling\PostcodeModel.cs</FileName>
+    </TypeIdentifier>
+    <ShowAsAssociation>
+      <Property Name="result" />
+    </ShowAsAssociation>
+  </Class>
+  <Class Name="API_App.PostcodesIOService.PostCode">
+    <Position X="5.5" Y="4" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AASAUBAAAlAACAAAAQEARAAACIEAAIQCAAAAAAACAAA=</HashCode>
+      <FileName>PostcodesIOService\DataHandling\PostcodeModel.cs</FileName>
+    </TypeIdentifier>
+    <ShowAsAssociation>
+      <Property Name="codes" />
+    </ShowAsAssociation>
+  </Class>
+  <Class Name="API_App.PostcodesIOService.Codes">
+    <Position X="7.75" Y="4" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAQAEBCAAhAACAAAAAAARAAAAAEAAAAAAAAAEAACAAA=</HashCode>
+      <FileName>PostcodesIOService\DataHandling\PostcodeModel.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="API_App.PostcodesIOService.SinglePostcodeDTO">
+    <Position X="0.5" Y="4" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAABEAAAAAAAAA=</HashCode>
+      <FileName>PostcodesIOService\DataHandling\SinglePostcodeDTO.cs</FileName>
+    </TypeIdentifier>
+    <ShowAsAssociation>
+      <Property Name="SinglePostcodeResponse" />
+    </ShowAsAssociation>
+  </Class>
+  <Class Name="API_App.PostcodesIOService.SinglePostcodeService">
+    <Position X="0.5" Y="0.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAgAAAACAAAAAAAAAAAAACAAAgBAAgAAAA=</HashCode>
+      <FileName>PostcodesIOService\SinglePostcodeService.cs</FileName>
+    </TypeIdentifier>
+    <ShowAsAssociation>
+      <Property Name="SinglePostcodeDTO" />
+      <Property Name="CallManager" />
+    </ShowAsAssociation>
+  </Class>
+  <Class Name="API_App.PostcodesIOService.CallManager">
+    <Position X="3" Y="1" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAEAAAAAAAAQAAAAABAAAAAAAAAAAAAA=</HashCode>
+      <FileName>PostcodesIOService\HTTPManager\CallManager.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Font Name="Segoe UI" Size="9" />
+</ClassDiagram>

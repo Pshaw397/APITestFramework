@@ -32,5 +32,24 @@ namespace API_App.PostcodesIOService
             var response = await _client.ExecuteAsync(request);
             return response.Content;
         }
+
+        /// <summary>
+        /// defines and makes the API request, and stores the response
+        /// </summary>
+        /// <param name="outcode"></param>
+        /// <returns>The response content</returns>
+        public async Task<string> MakeOutcodeResponse(string outcode)
+        {
+            // set up request
+            var request = new RestRequest();
+            request.AddHeader("Content-Type", "applicaton/json");
+
+            // define request resource path, changing to lowercase and removing whitespace
+            request.Resource = $"outcodes/{outcode.ToLower().Replace(" ", "")}";
+
+            // make request
+            var response = await _client.ExecuteAsync(request);
+            return response.Content;
+        }
     }
 }

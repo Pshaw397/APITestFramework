@@ -31,19 +31,19 @@ namespace APITests.Tests
         [Test]
         public void ObjectStatusIs200()
         {
-            Assert.That(_outcodeService.ResponseObject.status, Is.EqualTo(200));
+            Assert.That(_outcodeService.OutcodeDTO.OutcodeResponse.status, Is.EqualTo(200));
         }
 
         [Test]
         public void AdminDistrict_SouthOxforshire()
         {
-            Assert.That(_outcodeService.ResponseObject.result.admin_district[0], Is.EqualTo("South Oxfordshire"));        
+            Assert.That(_outcodeService.OutcodeDTO.OutcodeResponse.result.admin_district[0], Is.EqualTo("South Oxfordshire"));        
         }
 
         [Test]
         public void EastingsNoIs_469203()
         {
-            Assert.That(_outcodeService.ResponseObject.result.eastings, Is.EqualTo(469203));
+            Assert.That(_outcodeService.OutcodeDTO.OutcodeResponse.result.eastings, Is.EqualTo(469203));
         }
     }
 }

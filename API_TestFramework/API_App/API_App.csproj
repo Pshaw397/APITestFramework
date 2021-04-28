@@ -71,6 +71,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="AppConfigReader.cs" />
+    <Compile Include="PostcodesIOService\DataHandling\OutcodeDTO.cs" />
     <Compile Include="PostcodesIOService\DataHandling\SinglePostcodeDTO.cs" />
     <Compile Include="PostcodesIOService\GetOutcodeService.cs" />
     <Compile Include="PostcodesIOService\DataHandling\OutcodeModel.cs" />

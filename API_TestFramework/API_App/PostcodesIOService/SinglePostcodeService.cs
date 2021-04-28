@@ -1,7 +1,6 @@
 ﻿using System;
 using Newtonsoft.Json.Linq;
 using System.Threading.Tasks;
-using Newtonsoft.Json;
 
 namespace API_App.PostcodesIOService
 {
